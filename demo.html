@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <style>
+      .line {
+        background-color: #eeeeff;
+      }
+
+      .before {
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        Open a text edtior which allows "rich text" (I used TextEdit on the mac
+        in its Rich Text mode).
+      </li>
+      <li>
+        Open a text edtior which does not allow "rich text" (I also used
+        TextEdit, with Rich Text turned off in the window)).
+      </li>
+      <li>Open this page in your favorite browser.</li>
+      <li>
+        Select as much text as you want in the browser. Make sure the selection
+        spans lines/rows/
+      </li>
+      <li>
+        On the mac, at least, press and hold on the selected text for a moment,
+        and then drag
+      </li>
+      <li>
+        Notice the drag feedback as you do this includes the text that is
+        "user-select: none" even though it was not visibly selected.
+      </li>
+      <li>Drop the text in a rich text editor</li>
+      <li>
+        Notice that the dropped text includes the user-select: none text
+      </li>
+      <li>
+        Alternately, copy and paste the text (cmd/ctrl+C) and paste it into that
+        editor
+      </li>
+      <li>Notice that the user-select: none text is pasted</li>
+
+      <li>Drag text again and drop the text in a plain text editor</li>
+      <li>
+        Notice that the dropped text does NOT include the user-select: none text
+      </li>
+      <li>
+        Alternately, copy and paste the text (cmd/ctrl+C) and paste it into that
+        editor
+      </li>
+      <li>Notice that the user-select: none text is also NOT pasted</li>
+    </ul>
+    Select
+
+    <h3>Example in a table</h3>
+    <table>
+      <tbody>
+        <tr class="line">
+          <td class="before">i am user-select: none</td>
+          <td class="content">
+            <span class="stuff">This is some ordinary text. Select me</span>
+          </td>
+        </tr>
+
+        <tr class="line">
+          <td class="before">i am user-select: none</td>
+          <td class="content">
+            <span class="stuff">This is some other text. Select me</span>
+          </td>
+        </tr>
+
+        <tr class="line">
+          <td class="before">i am user-select: none</td>
+          <td class="content">
+            <span class="stuff">This is still some more text</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr />
+    <h3>Example in plain div and span</h3>
+
+    <div>
+      <span class="before">i am user-select: none</span>
+      <span class="stuff">This is some other text. Select me</span>
+    </div>
+    <div>
+      <span class="before">i am user-select: none</span>
+      <span class="stuff">This is some other text. Select me</span>
+    </div>
+  </body>
+</html>
